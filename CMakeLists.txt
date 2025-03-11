@@ -9,7 +9,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11 -fPIC")
 
 
+# 添加头文件目录
+include_directories(include)
+
 # 定义参与编译的源代码文件
-aux_source_directory(. SRC_LIST)
+aux_source_directory(src SRC_LIST)
+
 # 编译生成动态库
 add_library(mymuduo SHARED ${SRC_LIST})

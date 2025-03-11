@@ -21,7 +21,7 @@ if [ ! -d /usr/include/mymuduo ]; then
     mkdir /usr/include/mymuduo
 fi
 
-for header in `ls *.h`
+for header in `ls include/*.h`
 do
     cp $header /usr/include/mymuduo
 done
